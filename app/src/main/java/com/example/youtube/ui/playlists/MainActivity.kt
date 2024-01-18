@@ -35,6 +35,8 @@ class MainActivity : BaseActivity() {
         val intent = Intent(this, PlaylistItemsActivity::class.java)
         intent.putExtra("id", item.id)
         intent.putExtra("count", item.contentDetails.itemCount)
+        intent.putExtra("title", item.snippet.title)
+        intent.putExtra("description", item.snippet.description)
         startActivity(intent)
     }
 }

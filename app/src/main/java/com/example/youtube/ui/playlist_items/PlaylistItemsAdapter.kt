@@ -19,7 +19,6 @@ class PlaylistItemsAdapter:ListAdapter<PlaylistItemsModel.Item, PlaylistItemsVie
     override fun onBindViewHolder(holder: PlaylistItemsViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-
 }
 
 class PlaylistItemsViewHolder(private val binding:ItemDetailBinding):ViewHolder(binding.root){
@@ -27,7 +26,6 @@ class PlaylistItemsViewHolder(private val binding:ItemDetailBinding):ViewHolder(
         tvTitle.text = item?.snippet?.title
         Glide.with(image).load(item?.snippet?.thumbnails?.default?.url).into(image)
     }
-
 }
 
 class PlaylistItemsDiffCallback:DiffUtil.ItemCallback<PlaylistItemsModel.Item>(){
